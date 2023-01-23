@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../repository/model/review_comment.dart';
 import '../repository/rice_meteor_service.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/review_comments/index.dart';
+import 'index.dart';
 import '../base_bloc.dart';
 
 class ReviewCommentsBloc

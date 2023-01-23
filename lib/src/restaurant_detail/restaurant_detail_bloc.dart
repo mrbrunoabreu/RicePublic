@@ -6,7 +6,7 @@ import '../repository/model/restaurant.dart';
 import '../repository/model/review.dart';
 import '../repository/model/user.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/restaurant_detail/index.dart';
+import 'index.dart';
 
 import '../base_bloc.dart';
 

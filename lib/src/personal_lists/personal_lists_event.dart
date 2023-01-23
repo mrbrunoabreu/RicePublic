@@ -1,14 +1,14 @@
 import 'dart:async';
 import 'dart:developer' as developer;
 
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/personal_lists/personal_lists_bloc.dart';
-import 'package:rice/src/personal_lists/personal_lists_state.dart';
+import '../base_bloc.dart';
+import '../personal_lists/personal_lists_bloc.dart';
+import '../personal_lists/personal_lists_state.dart';
 import 'package:meta/meta.dart';
-import 'package:rice/src/personal_restaurants/personal_restaurants_event.dart';
-import 'package:rice/src/repository/model/personal_list.dart';
-import 'package:rice/src/repository/model/profile.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
+import '../personal_restaurants/personal_restaurants_event.dart';
+import '../repository/model/personal_list.dart';
+import '../repository/model/profile.dart';
+import '../repository/model/restaurant.dart';
 
 @immutable
 abstract class PersonalListsEvent {

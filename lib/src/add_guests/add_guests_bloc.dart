@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/add_guests/add_guests_event.dart';
-import 'package:rice/src/add_guests/add_guests_state.dart';
-import 'package:rice/src/base_bloc.dart';
+import 'add_guests_event.dart';
+import 'add_guests_state.dart';
+import '../base_bloc.dart';
 import '../repository/model/user.dart';
 
 import '../repository/rice_repository.dart';

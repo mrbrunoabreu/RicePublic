@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/review_comments/index.dart';
-import 'package:rice/src/screen_arguments.dart';
+import 'index.dart';
+import '../screen_arguments.dart';
 
 class ReviewCommentsPage extends StatelessWidget {
   static const String routeName = '/reviewComments';

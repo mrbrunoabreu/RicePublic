@@ -2,15 +2,16 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/plan_detail/index.dart';
-import 'package:rice/src/repository/model/plan.dart';
-import 'package:rice/src/repository/model/user.dart';
-import 'package:rice/src/repository/rice_repository.dart';
+import '../base_bloc.dart';
+import 'index.dart';
+import '../repository/model/plan.dart';
+import '../repository/model/user.dart';
+import '../repository/rice_repository.dart';
 
 class PlanDetailBloc extends BaseBloc<PlanDetailEvent, PlanDetailState> {
-  PlanDetailBloc({required RiceRepository riceRepository}) 
-    : super(riceRepository: riceRepository, initialState: UnPlanDetailState(0));
+  PlanDetailBloc({required RiceRepository riceRepository})
+      : super(
+            riceRepository: riceRepository, initialState: UnPlanDetailState(0));
 
   @override
   Future<void> close() async {

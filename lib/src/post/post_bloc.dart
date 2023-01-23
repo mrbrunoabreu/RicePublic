@@ -3,7 +3,7 @@ import 'dart:developer' as developer;
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../base_bloc.dart';
-import 'package:rice/src/post/index.dart';
+import 'index.dart';
 import '../repository/model/editorial.dart';
 import '../repository/rice_repository.dart';
 

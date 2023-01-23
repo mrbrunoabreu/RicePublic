@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/repository/model/review.dart';
-import 'package:rice/src/utils.dart';
+import '../repository/model/restaurant.dart';
+import '../repository/model/review.dart';
+import '../utils.dart';
 
-import 'package:rice/src/view/gallery_photo_view.dart';
+import 'gallery_photo_view.dart';
 
 class RestaurantRow extends StatelessWidget {
   final Restaurant restaurant;
@@ -21,8 +21,8 @@ class RestaurantRow extends StatelessWidget {
 
   void buildGalleryItems() {
     _galleryItems = (photos?.isNotEmpty ?? []) as bool
-        ? mapIndexed(
-                photos, (index, dynamic p) => GalleryItem(id: '$index', resource: p))
+        ? mapIndexed(photos,
+                (index, dynamic p) => GalleryItem(id: '$index', resource: p))
             .toList()
         : [];
   }
@@ -41,12 +41,10 @@ class RestaurantRow extends StatelessWidget {
                     Padding(
                         padding:
                             EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-                        child: Text(
-                          restaurant.name!,
-                          softWrap: false,
-                          overflow: TextOverflow.fade,
-                          style: Theme.of(context).textTheme.headline2
-                        )),
+                        child: Text(restaurant.name!,
+                            softWrap: false,
+                            overflow: TextOverflow.fade,
+                            style: Theme.of(context).textTheme.headline2)),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 6, vertical: 4),
                       child: Row(
@@ -60,7 +58,8 @@ class RestaurantRow extends StatelessWidget {
                                     restaurant.address!,
                                     softWrap: false,
                                     overflow: TextOverflow.fade,
-                                    style: Theme.of(context).textTheme.headline4,
+                                    style:
+                                        Theme.of(context).textTheme.headline4,
                                   ))),
                           restaurant.rating != null
                               ? Container(
@@ -74,8 +73,11 @@ class RestaurantRow extends StatelessWidget {
                                         size: 12,
                                       ),
                                       SizedBox(width: 4),
-                                      Text(restaurant.rating!.toStringAsFixed(1),
-                                          style: Theme.of(context).textTheme.subtitle2)
+                                      Text(
+                                          restaurant.rating!.toStringAsFixed(1),
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .subtitle2)
                                     ],
                                   ),
                                 )
@@ -351,8 +353,8 @@ class RestaurantReviewsRow extends StatelessWidget {
                                   ),
                                   SizedBox(width: 4),
                                   Text('${review.reviewRatings!.overall}',
-                                      style: Theme.of(context).textTheme.subtitle2
-                                  )
+                                      style:
+                                          Theme.of(context).textTheme.subtitle2)
                                 ],
                               ),
                             ),
@@ -360,17 +362,16 @@ class RestaurantReviewsRow extends StatelessWidget {
                         ),
                         Padding(
                             padding: EdgeInsets.symmetric(vertical: 8),
-                            child: Text(
-                              review.comment!,
-                              // (id == 0)
-                              //     ? 'I absolutely loved this place, the food is fresh and the magaritas are trying the pulled pork tacos. Amazing flavours'
-                              //     : 'Highly recommend trying the pulled pork tacos. Amazing flavoursHighly recommend trying the pulled pork tacos. Amazing flavours',
-                              softWrap: true,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: Theme.of(context).textTheme.bodyText1
-                              // )
-                            )),
+                            child: Text(review.comment!,
+                                // (id == 0)
+                                //     ? 'I absolutely loved this place, the food is fresh and the magaritas are trying the pulled pork tacos. Amazing flavours'
+                                //     : 'Highly recommend trying the pulled pork tacos. Amazing flavoursHighly recommend trying the pulled pork tacos. Amazing flavours',
+                                softWrap: true,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: Theme.of(context).textTheme.bodyText1
+                                // )
+                                )),
                       ]))),
         ],
       ),
@@ -442,7 +443,8 @@ class RestaurantReviewsRow extends StatelessWidget {
   }
 }
 
-Widget buildRestaurant(Restaurant restaurant, VoidCallback callback, BuildContext context) {
+Widget buildRestaurant(
+    Restaurant restaurant, VoidCallback callback, BuildContext context) {
   return SizedBox(
       width: 188.0,
       child: Padding(
@@ -470,12 +472,10 @@ Widget buildRestaurant(Restaurant restaurant, VoidCallback callback, BuildContex
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  Text(
-                    restaurant.address != null ? restaurant.address! : '',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                    style: Theme.of(context).textTheme.headline4
-                  ),
+                  Text(restaurant.address != null ? restaurant.address! : '',
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      style: Theme.of(context).textTheme.headline4),
                 ],
               ))));
 }

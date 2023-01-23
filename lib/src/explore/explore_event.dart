@@ -2,9 +2,10 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import 'package:geolocator/geolocator.dart';
-import 'package:rice/src/explore/index.dart';
+import 'index.dart';
 import 'package:meta/meta.dart';
-import 'package:rice/src/repository/rice_meteor_service.dart' show FollowingsRestaurantReviewsSubscription;
+import '../repository/rice_meteor_service.dart'
+    show FollowingsRestaurantReviewsSubscription;
 
 import '../utils.dart';
 
@@ -42,7 +43,8 @@ class LoadExploreEvent extends ExploreEvent {
   String toString() => 'LoadExploreEvent';
 
   LoadExploreEvent({bool loadMore = false, bool refresh = false})
-    : _loadMore = loadMore, _refresh = refresh;
+      : _loadMore = loadMore,
+        _refresh = refresh;
 
   @override
   Future<ExploreState> applyAsync(
@@ -68,11 +70,11 @@ class LoadExploreEvent extends ExploreEvent {
         position.longitude,
       );
 
-      FollowingsRestaurantReviewsSubscription subscription = 
-        bloc.subscribeFollowingsReviews();
+      FollowingsRestaurantReviewsSubscription subscription =
+          bloc.subscribeFollowingsReviews();
 
       return InExploreState(
-        _refresh? currentState!.version: 0,
+        _refresh ? currentState!.version : 0,
         [],
         plans,
         [],

@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:developer' as developer;
 
-import 'package:rice/src/plan_detail/index.dart';
+import 'index.dart';
 import 'package:meta/meta.dart';
-import 'package:rice/src/repository/model/plan.dart';
+import '../repository/model/plan.dart';
 
 @immutable
 abstract class PlanDetailEvent {
@@ -50,7 +50,8 @@ class LoadPlanDetailEvent extends PlanDetailEvent {
       final currentUser = await bloc!.getCurrentUser();
       if (isNeededLoad) {
         final Plan plan = await bloc.getPlan(planId: this.plan!.id);
-        return InPlanDetailState(currentState!.version + 1, plan, currentUser: currentUser);
+        return InPlanDetailState(currentState!.version + 1, plan,
+            currentUser: currentUser);
       } else {
         return InPlanDetailState(0, this.plan, currentUser: currentUser);
       }

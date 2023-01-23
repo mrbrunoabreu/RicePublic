@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/repository/model/plan.dart';
-import 'package:rice/src/repository/model/editorial.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
+import '../base_bloc.dart';
+import '../repository/model/plan.dart';
+import '../repository/model/editorial.dart';
+import '../repository/model/restaurant.dart';
 import 'package:tuple/tuple.dart';
 
 abstract class ExplorePlansState extends Equatable with LoaderController {

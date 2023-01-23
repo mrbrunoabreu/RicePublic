@@ -1,11 +1,13 @@
 import 'dart:async';
 import 'dart:developer' as developer;
 
-import 'package:rice/src/create_plan/index.dart';
+import 'package:flutter/material.dart';
+
+import 'index.dart';
 import 'package:meta/meta.dart';
-import 'package:rice/src/repository/model/plan.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/repository/model/user.dart';
+import '../repository/model/plan.dart';
+import '../repository/model/restaurant.dart';
+import '../repository/model/user.dart';
 
 @immutable
 abstract class CreatePlanEvent {
@@ -181,7 +183,7 @@ class OnDateSelectEvent extends CreatePlanEvent {
 }
 
 class OnTimeSelectEvent extends CreatePlanEvent {
-  final DateTime time;
+  final TimeOfDay time;
 
   OnTimeSelectEvent(this.time);
 
@@ -202,7 +204,11 @@ class OnTimeSelectEvent extends CreatePlanEvent {
           );
         }
 
-        return currentState.getNewVersionWith(day: this.time);
+        return currentState.getNewVersionWith(
+            day: DateTime(
+          time.hour,
+          time.minute,
+        ));
       }
 
       return currentState as InCreatePlanState?;

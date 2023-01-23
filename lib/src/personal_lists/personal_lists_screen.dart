@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/create_personal_list/create_personal_list.dart'
-    as view;
-import 'package:rice/src/personal_lists/personal_lists_bloc.dart';
-import 'package:rice/src/personal_lists/personal_lists_state.dart';
-import 'package:rice/src/personal_restaurants/personal_restaurants_page.dart';
-import 'package:rice/src/repository/model/profile.dart';
-import 'package:rice/src/screen_arguments.dart';
-import 'package:rice/src/utils.dart';
-import 'package:rice/src/view/my_list_item.dart';
-import 'package:rice/src/personal_lists/personal_lists_event.dart';
+import '../base_bloc.dart';
+import '../create_personal_list/create_personal_list.dart' as view;
+import 'personal_lists_bloc.dart';
+import 'personal_lists_state.dart';
+import '../personal_restaurants/personal_restaurants_page.dart';
+import '../repository/model/profile.dart';
+import '../screen_arguments.dart';
+import '../utils.dart';
+import '../view/my_list_item.dart';
+import 'personal_lists_event.dart';
 import 'dart:developer' as developer;
 
 class PersonalListsScreen extends StatefulWidget {

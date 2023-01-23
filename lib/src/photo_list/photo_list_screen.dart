@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:rice/src/view/gallery_photo_view.dart';
+import '../view/gallery_photo_view.dart';
 
 import '../screen_arguments.dart';
 
@@ -11,27 +11,26 @@ class PhotoListScreen extends StatelessWidget {
         ModalRoute.of(context)!.settings.arguments as PhotoListPageArguments?;
 
     return Padding(
-        padding: EdgeInsets.symmetric(vertical: 8),
-        child: MasonryGridView.count(
-          crossAxisCount: 2,
-          mainAxisSpacing: 2.0,
-          crossAxisSpacing: 2.0,
-          reverse: true,
-          itemBuilder: (context, index) {
-            // const url = args.photos[index].ur
-            return _ImageTile(
-              args!.photos![index],
-              onTapCallback: () => open(
-                          context,
-                          index,
-                          args.photos!
-                              .map((url) =>
-                                  GalleryItem(id: '$index', resource: url))
-                              .toList()),
-            );
-          },
-        ),
-      );
+      padding: EdgeInsets.symmetric(vertical: 8),
+      child: MasonryGridView.count(
+        crossAxisCount: 2,
+        mainAxisSpacing: 2.0,
+        crossAxisSpacing: 2.0,
+        reverse: true,
+        itemBuilder: (context, index) {
+          // const url = args.photos[index].ur
+          return _ImageTile(
+            args!.photos![index],
+            onTapCallback: () => open(
+                context,
+                index,
+                args.photos!
+                    .map((url) => GalleryItem(id: '$index', resource: url))
+                    .toList()),
+          );
+        },
+      ),
+    );
   }
 }
 

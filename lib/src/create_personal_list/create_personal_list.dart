@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/create_personal_list/create_personal_list_bloc.dart';
-import 'package:rice/src/create_personal_list/create_personal_list_event.dart';
-import 'package:rice/src/create_personal_list/create_personal_list_state.dart';
-import 'package:rice/src/repository/model/profile.dart' as model;
-import 'package:rice/src/repository/rice_repository.dart';
+import '../base_bloc.dart';
+import 'create_personal_list_bloc.dart';
+import 'create_personal_list_event.dart';
+import 'create_personal_list_state.dart';
+import '../repository/model/profile.dart' as model;
+import '../repository/rice_repository.dart';
 
 typedef void OnCompleteCallback(bool shouldRefresh);
 

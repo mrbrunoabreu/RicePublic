@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:geolocator/geolocator.dart';
 import '../base_bloc.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_event.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_state.dart';
+import 'find_restaurant_event.dart';
+import 'find_restaurant_state.dart';
 import '../repository/model/restaurant.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

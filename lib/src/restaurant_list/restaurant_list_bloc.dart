@@ -4,7 +4,7 @@ import 'dart:developer' as developer;
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../repository/model/restaurant.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/restaurant_list/index.dart';
+import 'index.dart';
 
 import '../base_bloc.dart';
 

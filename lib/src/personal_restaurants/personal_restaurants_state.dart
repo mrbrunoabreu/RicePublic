@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/repository/model/personal_list.dart';
+import '../base_bloc.dart';
+import '../repository/model/personal_list.dart';
 
 abstract class PersonalRestaurantsState extends Equatable
     with LoaderController {
@@ -20,7 +20,8 @@ abstract class PersonalRestaurantsState extends Equatable
   List<Object?> get props => propss!;
 }
 
-class UnPersonalRestaurantsState extends PersonalRestaurantsState with NeedShowLoader {
+class UnPersonalRestaurantsState extends PersonalRestaurantsState
+    with NeedShowLoader {
   UnPersonalRestaurantsState(int version) : super(version);
 
   @override

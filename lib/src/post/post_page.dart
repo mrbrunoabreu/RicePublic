@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/post/index.dart';
+import 'index.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/screen_arguments.dart';
+import '../screen_arguments.dart';
 
 class PostPage extends StatelessWidget {
   static const String routeName = '/post';

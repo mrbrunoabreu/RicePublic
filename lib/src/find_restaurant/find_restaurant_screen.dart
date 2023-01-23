@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_bloc.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_event.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_state.dart';
+import 'find_restaurant_bloc.dart';
+import 'find_restaurant_event.dart';
+import 'find_restaurant_state.dart';
 import '../repository/model/restaurant.dart';
 import '../repository/rice_meteor_service.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/view/restaurant.dart';
+import '../view/restaurant.dart';
 
 class FindRestaurantScreen extends StatefulWidget {
   final FindRestaurantBloc bloc;

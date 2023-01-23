@@ -3,11 +3,11 @@ import 'dart:developer' as developer;
 
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:geolocator/geolocator.dart';
-import 'package:rice/src/profile/index.dart';
+import 'index.dart';
 import 'package:meta/meta.dart';
 import '../repository/model/profile.dart';
 import '../repository/model/user.dart';
-import 'package:rice/src/utils.dart';
+import '../utils.dart';
 
 @immutable
 abstract class ProfileEvent {

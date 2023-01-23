@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:rice/src/base_bloc.dart';
+import '../base_bloc.dart';
 import '../repository/model/user.dart';
 
 abstract class AddGuestsState extends Equatable with LoaderController {

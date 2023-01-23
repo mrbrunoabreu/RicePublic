@@ -2,18 +2,20 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/personal_lists/personal_lists_event.dart';
-import 'package:rice/src/personal_lists/personal_lists_state.dart';
-import 'package:rice/src/repository/model/profile.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/repository/rice_repository.dart';
+import '../personal_lists/personal_lists_event.dart';
+import '../personal_lists/personal_lists_state.dart';
+import '../repository/model/profile.dart';
+import '../repository/model/restaurant.dart';
+import '../repository/rice_repository.dart';
 
 import '../base_bloc.dart';
 
 class PersonalListsBloc
     extends BaseBloc<PersonalListsEvent, PersonalListsState> {
-  PersonalListsBloc({required RiceRepository riceRepository}) 
-    : super(riceRepository: riceRepository, initialState: UnPersonalListsState(0));
+  PersonalListsBloc({required RiceRepository riceRepository})
+      : super(
+            riceRepository: riceRepository,
+            initialState: UnPersonalListsState(0));
 
   Future<List<ListMetadata>> findPersonalLists({required String? userId}) {
     return this.riceRepository.findPersonalLists(userId: userId);

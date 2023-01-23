@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/post/index.dart';
+import 'index.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../base_bloc.dart';
 import '../utils.dart';

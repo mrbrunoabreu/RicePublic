@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:developer' as developer;
 
-import 'package:rice/src/add_guests/add_guests_bloc.dart';
-import 'package:rice/src/add_guests/add_guests_state.dart';
+import 'add_guests_bloc.dart';
+import 'add_guests_state.dart';
 import 'package:meta/meta.dart';
 import '../repository/model/profile.dart';
 import '../repository/model/user.dart';

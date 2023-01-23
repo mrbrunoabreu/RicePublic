@@ -1,11 +1,11 @@
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/add_guests/index.dart';
-import 'package:rice/src/base_bloc.dart';
+import 'index.dart';
+import '../base_bloc.dart';
 import '../repository/model/user.dart';
-import 'package:rice/src/utils.dart';
-import 'package:rice/src/view/custom_checkbox.dart';
+import '../utils.dart';
+import '../view/custom_checkbox.dart';
 
 class AddGuestsScreen extends StatefulWidget {
   final List<User>? selectedUsers;

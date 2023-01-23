@@ -3,8 +3,8 @@ import 'dart:developer' as developer;
 
 import 'package:geolocator/geolocator.dart';
 import 'package:meta/meta.dart';
-import 'package:rice/src/review_comments/index.dart';
-import 'package:rice/src/utils.dart';
+import 'index.dart';
+import '../utils.dart';
 
 @immutable
 abstract class ReviewCommentsEvent {
@@ -21,9 +21,9 @@ class UnReviewCommentsEvent extends ReviewCommentsEvent {
   @override
   Future<ReviewCommentsState> applyAsync(
       {ReviewCommentsState? currentState, ReviewCommentsBloc? bloc}) async {
-        if (currentState is InReviewCommentsState) {
-          currentState.commentsSubscription.unsubscribe();
-        }
+    if (currentState is InReviewCommentsState) {
+      currentState.commentsSubscription.unsubscribe();
+    }
     return UnReviewCommentsState(0);
   }
 }

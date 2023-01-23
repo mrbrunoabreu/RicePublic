@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_bloc.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_state.dart';
-import 'package:rice/src/utils.dart';
+import 'find_restaurant_bloc.dart';
+import 'find_restaurant_state.dart';
+import '../utils.dart';
 import 'dart:developer' as developer;
 
 @immutable

@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:rice/src/create_personal_list/create_personal_list_bloc.dart';
-import 'package:rice/src/create_personal_list/create_personal_list_state.dart';
-import 'package:rice/src/repository/model/profile.dart';
+import 'create_personal_list_bloc.dart';
+import 'create_personal_list_state.dart';
+import '../repository/model/profile.dart';
 
 @immutable
 abstract class CreatePersonalListEvent {

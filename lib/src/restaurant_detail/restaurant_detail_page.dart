@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/restaurant_detail/index.dart';
+import 'index.dart';
 
 class RestaurantDetailPage extends StatelessWidget {
   static const String routeName = '/restaurantDetail';

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/repository/model/profile.dart';
+import '../base_bloc.dart';
+import '../repository/model/profile.dart';
 
 abstract class PersonalListsState extends Equatable with LoaderController {
   /// notify change state without deep clone state

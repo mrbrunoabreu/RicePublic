@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../base_bloc.dart';
 import '../repository/model/restaurant.dart';
-import 'package:rice/src/restaurant_detail/index.dart';
-import 'package:rice/src/restaurant_list/index.dart';
-import 'package:rice/src/view/restaurant.dart';
+import '../restaurant_detail/index.dart';
+import 'index.dart';
+import '../view/restaurant.dart';
 import 'package:tuple/tuple.dart';
 
 import '../screen_arguments.dart';

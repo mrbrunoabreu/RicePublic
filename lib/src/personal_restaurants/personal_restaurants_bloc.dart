@@ -1,17 +1,19 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/base_bloc.dart';
+import '../base_bloc.dart';
 import 'dart:developer' as developer;
 
-import 'package:rice/src/personal_restaurants/personal_restaurants_event.dart';
-import 'package:rice/src/personal_restaurants/personal_restaurants_state.dart';
-import 'package:rice/src/repository/model/personal_list.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/repository/rice_repository.dart';
+import 'personal_restaurants_event.dart';
+import 'personal_restaurants_state.dart';
+import '../repository/model/personal_list.dart';
+import '../repository/model/restaurant.dart';
+import '../repository/rice_repository.dart';
 
 class PersonalRestaurantsBloc
     extends BaseBloc<PersonalRestaurantsEvent, PersonalRestaurantsState> {
-  PersonalRestaurantsBloc({required RiceRepository riceRepository}) 
-    : super(riceRepository: riceRepository, initialState: UnPersonalRestaurantsState(0));
+  PersonalRestaurantsBloc({required RiceRepository riceRepository})
+      : super(
+            riceRepository: riceRepository,
+            initialState: UnPersonalRestaurantsState(0));
 
   Future<bool> addRestaurant({
     required Restaurant restaurant,

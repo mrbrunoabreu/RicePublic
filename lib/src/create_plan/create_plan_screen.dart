@@ -3,16 +3,15 @@ import 'dart:async';
 import 'package:collection/collection.dart' show IterableNullableExtension;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:rice/src/add_guests/add_guests_page.dart';
+import '../add_guests/add_guests_page.dart';
 import '../base_bloc.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_page.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/repository/model/user.dart';
-import 'package:rice/src/screen_arguments.dart';
-import 'package:rice/src/utils.dart';
-import 'package:rice/src/view/restaurant.dart';
+import '../find_restaurant/find_restaurant_page.dart';
+import '../repository/model/restaurant.dart';
+import '../repository/model/user.dart';
+import '../screen_arguments.dart';
+import '../utils.dart';
+import '../view/restaurant.dart';
 import 'dart:developer' as developer;
 
 import 'index.dart';
@@ -313,20 +312,18 @@ class CreatePlanScreenState extends State<CreatePlanScreen> {
                               color: Color(0xFF3345A9),
                               fontWeight: FontWeight.bold)),
                     ),
-                    onTap: () {
-                      DatePicker.showDatePicker(
-                        context,
-                        theme: DatePickerTheme(
-                          containerHeight: 210.0,
-                        ),
-                        // showTitleActions: true,
-                        minTime: DateTime.now(),
-                        maxTime: DateTime.now().add(Duration(days: 3650)),
-                        onConfirm: (DateTime date) =>
-                            widget._createPlanBloc.add(OnDateSelectEvent(date)),
-                        currentTime: DateTime.now(),
-                        locale: LocaleType.en,
-                      );
+                    onTap: () async {
+                      DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime.now(),
+                        lastDate:
+                            DateTime.now().add(const Duration(days: 1825)),
+                      ).then((value) {
+                        if (value != null) {
+                          widget._createPlanBloc.add(OnDateSelectEvent(value));
+                        }
+                      });
                     },
                   ),
                 ),
@@ -357,18 +354,15 @@ class CreatePlanScreenState extends State<CreatePlanScreen> {
                         ),
                       ),
                     ),
-                    onTap: () {
-                      DatePicker.showTimePicker(context,
-                          showSecondsColumn: false,
-                          theme: DatePickerTheme(
-                            containerHeight: 210.0,
-                          ),
-                          // showTitleActions: true,
-                          onConfirm: (DateTime date) => widget._createPlanBloc
-                              .add(OnTimeSelectEvent(date)),
-                          currentTime:
-                              DateTime.now().add(Duration(minutes: 15)),
-                          locale: LocaleType.en);
+                    onTap: () async {
+                      DateTime? pickedDate = await showTimePicker(
+                        context: context,
+                        initialTime: TimeOfDay.now(),
+                      ).then((value) {
+                        if (value != null) {
+                          widget._createPlanBloc.add(OnTimeSelectEvent(value));
+                        }
+                      });
                     },
                   ),
                   // Text(''))

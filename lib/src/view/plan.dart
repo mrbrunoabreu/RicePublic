@@ -1,10 +1,10 @@
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
-import 'package:rice/src/plan_detail/index.dart';
-import 'package:rice/src/repository/model/plan.dart';
-import 'package:rice/src/repository/model/user.dart';
-import 'package:rice/src/view/restaurant.dart';
+import '../plan_detail/index.dart';
+import '../repository/model/plan.dart';
+import '../repository/model/user.dart';
+import 'restaurant.dart';
 
 Widget buildPlan(
   BuildContext context,
@@ -41,12 +41,12 @@ Widget buildPlan(
                   padding: const EdgeInsets.only(
                       top: 10, left: 12, right: 14, bottom: 18.0),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                    _planHeader(plan, context),
-                    SizedBox(height: 10),
-                    _planBody(plan, 72, context)
-                  ]),
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        _planHeader(plan, context),
+                        SizedBox(height: 10),
+                        _planBody(plan, 72, context)
+                      ]),
                 ),
               )),
         ));
@@ -67,13 +67,12 @@ Widget _planHeader(Plan plan, context) {
         width: 16,
       ),
       Text(
-        plan.planDate != null
-            ? intl.DateFormat.yMMMEd().format(plan.planDate!)
-            : "",
-        softWrap: false,
-        overflow: TextOverflow.fade,
-        style: Theme.of(context).textTheme.headline4
-      ),
+          plan.planDate != null
+              ? intl.DateFormat.yMMMEd().format(plan.planDate!)
+              : "",
+          softWrap: false,
+          overflow: TextOverflow.fade,
+          style: Theme.of(context).textTheme.headline4),
     ],
   );
 }
@@ -125,11 +124,13 @@ Widget _planBody(Plan plan, double height, BuildContext context) {
                       Stack(
                           textDirection: TextDirection.rtl,
                           alignment: AlignmentDirectional.centerEnd,
-                          children: _guestsAvatar(plan.users?.length != null
-                              ? plan.users!.length >= 4
-                                  ? plan.users!.sublist(0, 4)
-                                  : plan.users
-                              : [], context)
+                          children: _guestsAvatar(
+                              plan.users?.length != null
+                                  ? plan.users!.length >= 4
+                                      ? plan.users!.sublist(0, 4)
+                                      : plan.users
+                                  : [],
+                              context)
                             ..add((plan.users?.length != null
                                 ? plan.users!.length > 4
                                     ? Padding(
@@ -174,7 +175,7 @@ List<Widget> _guestsAvatar(List<User>? guests, BuildContext context) {
             height: 28,
             padding: const EdgeInsets.all(2.0),
             decoration: BoxDecoration(
-              color: Theme.of(context).backgroundColor,// border color
+              color: Theme.of(context).backgroundColor, // border color
               shape: BoxShape.circle,
             ),
             child: CircleAvatar(

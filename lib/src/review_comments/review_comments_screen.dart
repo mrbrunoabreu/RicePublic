@@ -2,12 +2,12 @@ import 'dart:async';
 import 'package:animated_stream_list_nullsafety/animated_stream_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/meal_timeline_sketch/meal_timeline_screen_sketch.dart';
+import '../meal_timeline_sketch/meal_timeline_screen_sketch.dart';
 import '../repository/model/review_comment.dart';
 import '../repository/model/timeline_reviews.dart';
 import '../repository/model/user.dart';
-import 'package:rice/src/review_comments/index.dart';
-import 'package:rice/src/view/user_avatar.dart';
+import '../review_comments/index.dart';
+import '../view/user_avatar.dart';
 import '../base_bloc.dart';
 import '../utils.dart';
 

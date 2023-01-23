@@ -2,19 +2,20 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/explore/index.dart';
-import 'package:rice/src/repository/model/plan.dart';
-import 'package:rice/src/repository/model/editorial.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/repository/model/review_comment.dart';
-import 'package:rice/src/repository/rice_meteor_service.dart' show FollowingsRestaurantReviewsSubscription;
-import 'package:rice/src/repository/rice_repository.dart';
+import 'index.dart';
+import '../repository/model/plan.dart';
+import '../repository/model/editorial.dart';
+import '../repository/model/restaurant.dart';
+import '../repository/model/review_comment.dart';
+import '../repository/rice_meteor_service.dart'
+    show FollowingsRestaurantReviewsSubscription;
+import '../repository/rice_repository.dart';
 
 import '../base_bloc.dart';
 
 class ExploreBloc extends BaseBloc<ExploreEvent, ExploreState> {
-  ExploreBloc({required RiceRepository riceRepository}) 
-    : super(riceRepository: riceRepository, initialState: UnExploreState(0));
+  ExploreBloc({required RiceRepository riceRepository})
+      : super(riceRepository: riceRepository, initialState: UnExploreState(0));
 
   @override
   Future<void> close() async {
@@ -33,7 +34,8 @@ class ExploreBloc extends BaseBloc<ExploreEvent, ExploreState> {
     return riceRepository.publicPlansByLocation(currentLat, currentLng);
   }
 
-  Future<List<ReviewComment>> getReviewComments(String reviewId, int numOfLatest) {
+  Future<List<ReviewComment>> getReviewComments(
+      String reviewId, int numOfLatest) {
     return riceRepository.getReviewComments(reviewId, numOfLatest);
   }
 
@@ -45,8 +47,8 @@ class ExploreBloc extends BaseBloc<ExploreEvent, ExploreState> {
     return riceRepository.toggleLikeReview(reviewId);
   }
 
-  FollowingsRestaurantReviewsSubscription subscribeFollowingsReviews() => 
-    riceRepository.subscribeFollowingsReviews();
+  FollowingsRestaurantReviewsSubscription subscribeFollowingsReviews() =>
+      riceRepository.subscribeFollowingsReviews();
 
   @override
   Future<void> mapEventToState(

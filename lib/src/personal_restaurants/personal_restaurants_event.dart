@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/personal_restaurants/personal_restaurants_bloc.dart';
-import 'package:rice/src/personal_restaurants/personal_restaurants_state.dart';
-import 'package:rice/src/repository/model/personal_list.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
+import '../base_bloc.dart';
+import 'personal_restaurants_bloc.dart';
+import 'personal_restaurants_state.dart';
+import '../repository/model/personal_list.dart';
+import '../repository/model/restaurant.dart';
 
 @immutable
 abstract class PersonalRestaurantsEvent {

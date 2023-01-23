@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import '../base_bloc.dart';
-import 'package:rice/src/find_chat_partner/find_chat_partner_event.dart';
-import 'package:rice/src/find_chat_partner/find_chat_partner_state.dart';
+import 'find_chat_partner_event.dart';
+import 'find_chat_partner_state.dart';
 import '../repository/model/chat.dart';
 import '../repository/model/restaurant.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

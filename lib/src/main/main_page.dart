@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-// import '../chat_list/index.dart';
-// import '../explore/index.dart';
-// import '../plan_list/index.dart';
-// import '../profile/index.dart';
+import '../chat_list/index.dart';
+import '../explore/index.dart';
+import '../plan_list/index.dart';
+import '../profile/index.dart';
 
 import '../notification/index.dart';
 import 'package:ionicons/ionicons.dart';
@@ -83,9 +83,9 @@ class _MainPageState extends State<MainPage> {
             controller: _controller,
             children: <Widget>[
               ExplorePage(),
-              // PlanListPage(),
-              // ChatListPage(),
-              // ProfilePage()
+              PlanListPage(),
+              ChatListPage(),
+              ProfilePage()
             ],
             physics: NeverScrollableScrollPhysics(),
           ),

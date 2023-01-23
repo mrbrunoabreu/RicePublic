@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="35px" viewBox="0 0 26 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 64 (101010) - https://sketch.com -->
+    <title>3404A112-FF8A-409E-B398-394CB110C790</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Hifi-UI-Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BookMarkPopup" transform="translate(-129.000000, -817.000000)" fill-rule="nonzero">
+            <g id="Group-11">
+                <g id="map-marker-alt" transform="translate(129.000000, 817.000000)">
+                    <path d="M13,0 C5.82027604,0 0,5.8762431 0,13.1250064 C0,18.4169133 1.82609375,19.894707 11.6639792,34.2938644 C12.3095104,35.2353102 13.6904219,35.2354469 14.3360885,34.2938644 C24.1739062,19.894707 26,18.4169133 26,13.1250064 C26,5.8762431 20.179724,0 13,0 Z M13,32.3976428 C3.56856771,18.6271185 2.16666667,17.5337781 2.16666667,13.1250064 C2.16666667,10.203462 3.29353646,7.45684934 5.33968229,5.39102802 C7.38582813,3.3252067 10.1062813,2.18750107 13,2.18750107 C15.8937188,2.18750107 18.6141719,3.3252067 20.6603177,5.39102802 C22.7064635,7.45684934 23.8333333,10.203462 23.8333333,13.1250064 C23.8333333,17.5335047 22.4323125,18.625888 13,32.3976428 Z" id="Shape" fill="#D8D8D8"></path>
+                    <polyline id="Path-2" stroke="#D8D8D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="8 14.1691282 11.8906923 18 19 11"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

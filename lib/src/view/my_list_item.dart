@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rice/src/repository/model/profile.dart';
+import '../repository/model/profile.dart';
 
 class MyListItem extends StatelessWidget {
   final ListMetadata metadata;
@@ -27,12 +27,10 @@ class MyListItem extends StatelessWidget {
                   Expanded(
                     child: Container(
                       margin: EdgeInsets.only(right: 8),
-                      child: Text(
-                        this.metadata.name!,
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headline5
-                      ),
+                      child: Text(this.metadata.name!,
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          style: Theme.of(context).textTheme.headline5),
                     ),
                   ),
                   Container(
@@ -48,10 +46,8 @@ class MyListItem extends StatelessWidget {
                   )
                 ],
               ),
-              Text(
-                this.metadata.shortDescription!,
-                style: Theme.of(context).textTheme.headline3
-              ),
+              Text(this.metadata.shortDescription!,
+                  style: Theme.of(context).textTheme.headline3),
             ],
           ),
           decoration: BoxDecoration(

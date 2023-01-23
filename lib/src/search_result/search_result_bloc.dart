@@ -2,17 +2,19 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/repository/model/user.dart';
-import 'package:rice/src/repository/rice_repository.dart';
-import 'package:rice/src/search_result/index.dart';
+import '../repository/model/restaurant.dart';
+import '../repository/model/user.dart';
+import '../repository/rice_repository.dart';
+import 'index.dart';
 import 'package:tuple/tuple.dart';
 
 import '../base_bloc.dart';
 
 class SearchResultBloc extends BaseBloc<SearchResultEvent, SearchResultState> {
-  SearchResultBloc({required RiceRepository riceRepository}) 
-    : super(riceRepository: riceRepository, initialState: UnSearchResultState(0));
+  SearchResultBloc({required RiceRepository riceRepository})
+      : super(
+            riceRepository: riceRepository,
+            initialState: UnSearchResultState(0));
 
   @override
   Future<void> close() async {

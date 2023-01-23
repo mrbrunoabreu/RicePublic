@@ -2,9 +2,9 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:rice/src/repository/model/plan.dart';
+import '../repository/model/plan.dart';
 import "package:collection/collection.dart";
-import 'package:rice/src/view/plan.dart';
+import 'plan.dart';
 
 class PlansSectionList extends StatelessWidget {
   final List<Plan> plans;
@@ -38,7 +38,8 @@ class PlansSectionList extends StatelessWidget {
     );
   }
 
-  Widget _buildSection(BuildContext context, {String? title, required List<Plan> plans}) {
+  Widget _buildSection(BuildContext context,
+      {String? title, required List<Plan> plans}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

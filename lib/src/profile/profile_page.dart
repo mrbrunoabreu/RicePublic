@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/profile/index.dart';
+import 'index.dart';
 import '../repository/rice_repository.dart';
 
 class ProfilePage extends StatelessWidget {

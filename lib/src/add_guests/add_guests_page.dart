@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/add_guests/index.dart';
+import 'index.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/screen_arguments.dart';
-import 'package:rice/src/view/screen_bar.dart';
+import '../screen_arguments.dart';
+import '../view/screen_bar.dart';
 import 'dart:developer' as developer;
 
 class AddGuestsPage extends StatelessWidget {

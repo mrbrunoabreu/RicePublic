@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/explore/explore_bloc.dart';
-import 'package:rice/src/explore_plans/explore_plans_bloc.dart';
-import 'package:rice/src/explore_plans/explore_plans_event.dart';
-import 'package:rice/src/explore_plans/explore_plans_state.dart';
-import 'package:rice/src/repository/model/plan.dart';
-import 'package:rice/src/screen_arguments.dart';
-import 'package:rice/src/view/plans_section_list.dart';
+import '../explore/explore_bloc.dart';
+import 'explore_plans_bloc.dart';
+import 'explore_plans_event.dart';
+import 'explore_plans_state.dart';
+import '../repository/model/plan.dart';
+import '../screen_arguments.dart';
+import '../view/plans_section_list.dart';
 
 class ExplorePlansScreen extends StatefulWidget {
   final ExplorePlansPageArguments arguments;

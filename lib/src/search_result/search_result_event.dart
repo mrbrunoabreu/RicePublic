@@ -4,7 +4,7 @@ import 'dart:developer' as developer;
 import 'package:geolocator/geolocator.dart';
 import '../repository/model/restaurant.dart';
 import '../repository/model/user.dart';
-import 'package:rice/src/search_result/index.dart';
+import '../search_result/index.dart';
 import 'package:meta/meta.dart';
 import 'package:tuple/tuple.dart';
 

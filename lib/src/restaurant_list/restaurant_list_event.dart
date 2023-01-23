@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import '../repository/model/restaurant.dart';
-import 'package:rice/src/restaurant_list/index.dart';
+import 'index.dart';
 import 'package:meta/meta.dart';
 import 'package:tuple/tuple.dart';
 

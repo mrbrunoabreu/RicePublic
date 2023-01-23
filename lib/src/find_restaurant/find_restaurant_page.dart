@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_bloc.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_screen.dart';
+import 'find_restaurant_bloc.dart';
+import 'find_restaurant_screen.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/view/screen_bar.dart';
+import '../view/screen_bar.dart';
 
 class FindRestaurantPage extends StatefulWidget {
   static final String routeName = '/findRestaurant';

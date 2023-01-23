@@ -2,16 +2,16 @@ import 'package:collection/collection.dart' show IterableNullableExtension;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/create_plan/create_plan_page.dart';
-import 'package:rice/src/plan_detail/index.dart';
-import 'package:rice/src/repository/model/plan.dart';
-import 'package:rice/src/profile/profile_page.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/repository/model/user.dart';
-import 'package:rice/src/screen_arguments.dart';
-import 'package:rice/src/utils.dart';
-import 'package:rice/src/view/restaurant.dart';
+import '../base_bloc.dart';
+import '../create_plan/create_plan_page.dart';
+import 'index.dart';
+import '../repository/model/plan.dart';
+import '../profile/profile_page.dart';
+import '../repository/model/restaurant.dart';
+import '../repository/model/user.dart';
+import '../screen_arguments.dart';
+import '../utils.dart';
+import '../view/restaurant.dart';
 
 class PlanDetailScreen extends StatefulWidget {
   const PlanDetailScreen({

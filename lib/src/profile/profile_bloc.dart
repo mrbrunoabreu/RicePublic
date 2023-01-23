@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/profile/index.dart';
+import 'index.dart';
 import '../repository/model/chat.dart';
 import '../repository/model/profile.dart';
 import '../repository/model/review.dart';

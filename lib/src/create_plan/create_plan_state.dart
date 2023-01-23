@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import '../base_bloc.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/repository/model/user.dart';
+import '../repository/model/restaurant.dart';
+import '../repository/model/user.dart';
 
 abstract class CreatePlanState extends Equatable with LoaderController {
   /// notify change state without deep clone state

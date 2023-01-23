@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import 'package:geolocator/geolocator.dart';
-import 'package:rice/src/explore/index.dart';
+import '../explore/index.dart';
 import 'package:meta/meta.dart';
-import 'package:rice/src/explore_plans/explore_plans_bloc.dart';
-import 'package:rice/src/explore_plans/explore_plans_state.dart';
+import 'explore_plans_bloc.dart';
+import 'explore_plans_state.dart';
 
 import '../utils.dart';
 

@@ -4,7 +4,7 @@ import 'dart:developer' as developer;
 import '../repository/model/restaurant.dart';
 import '../repository/model/review.dart';
 import '../repository/model/user.dart';
-import 'package:rice/src/restaurant_detail/index.dart';
+import 'index.dart';
 import 'package:meta/meta.dart';
 
 @immutable

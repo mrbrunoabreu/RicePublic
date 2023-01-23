@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:rice/src/find_chat_partner/find_chat_partner_bloc.dart';
-import 'package:rice/src/find_chat_partner/find_chat_partner_state.dart';
+import 'find_chat_partner_bloc.dart';
+import 'find_chat_partner_state.dart';
 import '../repository/model/chat.dart';
 import '../repository/model/user.dart';
 import 'package:rxdart/transformers.dart';

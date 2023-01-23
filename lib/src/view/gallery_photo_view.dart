@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
-import 'package:rice/src/view/screen_bar.dart';
+import 'screen_bar.dart';
 
 void open(BuildContext context, final int initialIndex,
     List<GalleryItem> galleryItems) {
@@ -105,7 +105,8 @@ class _GalleryPhotoViewWrapperState extends State<GalleryPhotoViewWrapper> {
                 ),
               ),
               // loadingChild: widget.loadingChild,
-              backgroundDecoration: widget.backgroundDecoration as BoxDecoration?,
+              backgroundDecoration:
+                  widget.backgroundDecoration as BoxDecoration?,
               pageController: widget.pageController,
               onPageChanged: onPageChanged,
               scrollDirection: widget.scrollDirection,

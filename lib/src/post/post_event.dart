@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:developer' as developer;
 
 import 'package:geolocator/geolocator.dart';
-import 'package:rice/src/post/index.dart';
+import 'index.dart';
 import 'package:meta/meta.dart';
-import 'package:rice/src/utils.dart';
+import '../utils.dart';
 
 @immutable
 abstract class PostEvent {
@@ -12,8 +12,7 @@ abstract class PostEvent {
     return await loadUserLastLocation();
   }
 
-  Future<PostState> applyAsync(
-      {PostState? currentState, PostBloc? bloc});
+  Future<PostState> applyAsync({PostState? currentState, PostBloc? bloc});
   // final PostRepository _postRepository = PostRepository();
 }
 

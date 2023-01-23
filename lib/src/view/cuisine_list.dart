@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
+import '../repository/model/restaurant.dart';
 
 Widget buildList(Restaurant restaurant, double size) {
   var rectSize = size - 10;

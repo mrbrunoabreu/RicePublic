@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rice/src/repository/model/profile.dart';
-import 'package:rice/src/repository/rice_repository.dart';
+import '../repository/model/profile.dart';
+import '../repository/rice_repository.dart';
 
 class UserAvatar extends StatefulWidget {
   final String? user;
@@ -19,9 +19,11 @@ class _UserAvatarState extends State<UserAvatar> {
 
   @override
   void initState() {
-    this.avatarFuture = (this.widget.profile == null)? this.widget.repository.findProfile(
-          userId: this.widget.user,
-        ) : Future.value(this.widget.profile);
+    this.avatarFuture = (this.widget.profile == null)
+        ? this.widget.repository.findProfile(
+              userId: this.widget.user,
+            )
+        : Future.value(this.widget.profile);
 
     super.initState();
   }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/find_chat_partner/find_chat_partner_bloc.dart';
-import 'package:rice/src/find_chat_partner/find_chat_partner_screen.dart';
+import 'find_chat_partner_bloc.dart';
+import 'find_chat_partner_screen.dart';
 import '../repository/rice_repository.dart';
-import 'package:rice/src/screen_arguments.dart';
-import 'package:rice/src/view/screen_bar.dart';
+import '../screen_arguments.dart';
+import '../view/screen_bar.dart';
 
 class FindChatPartnerPage extends StatefulWidget {
   static final String routeName = '/findChatPartner';

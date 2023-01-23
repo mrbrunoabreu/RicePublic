@@ -1,18 +1,18 @@
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/chat_room/chat_room_page.dart';
-import 'package:rice/src/find_chat_partner/find_chat_partner_bloc.dart';
-import 'package:rice/src/find_chat_partner/find_chat_partner_event.dart';
-import 'package:rice/src/find_chat_partner/find_chat_partner_state.dart';
+import '../chat_room/chat_room_page.dart';
+import 'find_chat_partner_bloc.dart';
+import 'find_chat_partner_event.dart';
+import 'find_chat_partner_state.dart';
 import '../repository/model/chat.dart';
 import '../repository/model/user.dart';
-import 'package:rice/src/screen_arguments.dart';
+import '../screen_arguments.dart';
 
 import 'dart:developer' as developer;
 
-import 'package:rice/src/view/avatar_row.dart';
-import 'package:rice/src/view/profile_picture.dart';
+import '../view/avatar_row.dart';
+import '../view/profile_picture.dart';
 
 class FindChatPartnerScreen extends StatefulWidget {
   final FindChatPartnerBloc bloc;

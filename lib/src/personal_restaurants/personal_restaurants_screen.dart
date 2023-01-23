@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rice/src/base_bloc.dart';
-import 'package:rice/src/find_restaurant/find_restaurant_page.dart';
-import 'package:rice/src/personal_restaurants/personal_restaurants_bloc.dart';
-import 'package:rice/src/personal_restaurants/personal_restaurants_event.dart';
-import 'package:rice/src/personal_restaurants/personal_restaurants_state.dart';
-import 'package:rice/src/repository/model/restaurant.dart';
-import 'package:rice/src/restaurant_detail/restaurant_detail_page.dart';
-import 'package:rice/src/screen_arguments.dart';
+import '../base_bloc.dart';
+import '../find_restaurant/find_restaurant_page.dart';
+import 'personal_restaurants_bloc.dart';
+import 'personal_restaurants_event.dart';
+import 'personal_restaurants_state.dart';
+import '../repository/model/restaurant.dart';
+import '../restaurant_detail/restaurant_detail_page.dart';
+import '../screen_arguments.dart';
 import 'package:ionicons/ionicons.dart';
 
 class PersonalRestaurantsScreen extends StatefulWidget {
